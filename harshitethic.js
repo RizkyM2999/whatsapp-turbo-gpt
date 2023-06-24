@@ -81,7 +81,7 @@ module.exports = sansekai = async (client, m, chatUpdate, store) => {
       }
     }
     // If the message is not a command, use OpenAI to generate a response
-    else {
+    else if (text.startsWith("!sarah")) {
       // If OpenAI API key is not configured, return and do nothing
       if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return;
       // Create OpenAI API client
